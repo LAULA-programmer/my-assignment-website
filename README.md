@@ -1,1 +1,4 @@
-# my-assignment-website
+MY NAME : LAULA HAMIS WINFRED
+CA NO: CA/DIST/11334
+REG NO:24101123130113
+MY LINK:   https://soft-duckanoo-1c5277.netlify.app/
