@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>O-Level Student Management System</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <h1>O-Level Student Management System</h1>
+    </header>
+    <main>
+        <section id="registration">
+            <h2>Register New Student</h2>
+            <form id="studentForm">
+                <div>
+                    <label for="studentId">Student ID:</label>
+                    <input type="text" id="studentId" required />
+                </div>
+                <div>
+                    <label for="studentName">Full Name:</label>
+                    <input type="text" id="studentName" required />
+                </div>
+                <div>
+                    <label for="studentAge">Age:</label>
+                    <input type="number" id="studentAge" min="10" max="20" required />
+                </div>
+                <div>
+                    <label for="studentGender">Gender:</label>
+                    <select id="studentGender" required>
+                        <option value="">Select</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="studentFormLevel">Form Level:</label>
+                    <select id="studentFormLevel" required>
+                        <option value="">Select</option>
+                        <option value="1">Form 1</option>
+                        <option value="2">Form 2</option>
+                        <option value="3">Form 3</option>
+                        <option value="4">Form 4</option>
+                    </select>
+                </div>
+                <button type="submit">Save Student</button>
+            </form>
+        </section>
+
+        <section id="searchSection">
+            <h2>Search Students</h2>
+            <input type="text" id="searchInput" placeholder="Search by ID or name" />
+        </section>
+
+        <section id="studentList">
+            <h2>Registered Students</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Form</th>
+                        <th>Average</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="studentsTableBody">
+                    <!-- Populated by JS -->
+                </tbody>
+            </table>
+        </section>
+        
+        <!-- Details / performance modal or section -->
+        <section id="detailsSection" class="hidden">
+            <h2>Student Details</h2>
+            <button id="closeDetails">Close</button>
+            <div id="studentDetails"></div>
+            <button id="promoteBtn">Promote to next form</button>
+            <h3>Academic Performance</h3>
+            <div id="performanceHistory"></div>
+            <h3 id="performanceFormTitle">Add / Update Performance</h3>
+            <form id="performanceForm">
+                <input type="hidden" id="perfStudentId" />
+                <div>
+                    <label for="perfFormLevel">Form Level:</label>
+                    <select id="perfFormLevel" required>
+                        <option value="">Select</option>
+                        <option value="1">Form 1</option>
+                        <option value="2">Form 2</option>
+                        <option value="3">Form 3</option>
+                        <option value="4">Form 4</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="mathScore">Mathematics:</label>
+                    <input type="number" id="mathScore" min="0" max="100" required />
+                </div>
+                <div>
+                    <label for="englishScore">English:</label>
+                    <input type="number" id="englishScore" min="0" max="100" required />
+                </div>
+                <div>
+                    <label for="scienceScore">Science:</label>
+                    <input type="number" id="scienceScore" min="0" max="100" required />
+                </div>
+                <div>
+                    <label for="socialScore">Social Studies:</label>
+                    <input type="number" id="socialScore" min="0" max="100" required />
+                </div>
+                <button type="submit">Save Performance</button>
+            </form>
+        </section>
+
+
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
